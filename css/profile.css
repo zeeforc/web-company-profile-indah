@@ -1,0 +1,279 @@
+:root {
+  --primary-color: #291e12;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+p {
+  text-align: justify;
+}
+
+h2 {
+  line-height: 1;
+}
+body {
+  background: #fff;
+  color: #333;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+.topbar {
+  background: #f5f5f5;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  background-color: #fff;
+  color: #fff;
+}
+
+.navbar .nav-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .container {
+  background: #fff;
+}
+.navbar .container .logo {
+  padding: 10px 3% 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  max-width: 500px;
+  width: 100%;
+  background: var(--primary-color);
+  clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+}
+
+.navbar .container .logo .logo-icon {
+  max-width: 60px;
+  height: 60px;
+  width: fit-content;
+}
+.navbar .container .logo .logo-icon img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+.navbar .container .logo .logo-title > h2 {
+  line-height: 1;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #291e12;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  position: relative;
+  height: 600px;
+  background: url("../assets/bg/bg.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgb(41, 30, 18, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 0.9;
+}
+
+.hero p {
+  margin-top: 10px;
+  width: 600px;
+}
+
+.hero-cards {
+  margin-top: 4rem;
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  color: #333;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.card .icons {
+  width: 60px;
+  height: 60px;
+  display: flex;
+}
+
+.card .icons img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+.section {
+  width: 100%;
+  padding: 6rem 3rem;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.sejarah {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.sejarah .sejarah-img {
+  width: 40%;
+  max-height: 500px;
+  height: 100%;
+}
+.sejarah .sejarah-text {
+  width: 60%;
+}
+.sejarah-img img {
+  width: 100%;
+  aspect-ratio: 9/10;
+  object-fit: cover;
+}
+
+.sejarah-text h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.center-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 60px;
+}
+
+.visi-misi {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: start;
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.visi {
+  width: 100%;
+  max-width: 600px;
+}
+.visi p {
+  margin-top: 20px;
+}
+.misi-card {
+  background: #684f37;
+  padding: 30px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 550px;
+}
+
+.misi-card span {
+  position: absolute;
+  padding: 6px 60px;
+  margin-top: -3rem;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background: #ffffff;
+  color: var(--primary-color);
+}
+
+.misi-card ol {
+  margin-top: 20px;
+  list-style: none;
+  counter-reset: item;
+}
+
+.misi-card ol li {
+  counter-increment: item;
+  margin-bottom: 8px;
+}
+
+.misi-card ol li::before {
+  content: counter(item) ".";
+  font-weight: bold;
+  margin-right: 10px; /* <-- atur jarak di sini */
+}
+
+
+.section-light img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.struktur-img {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.struktur-img img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 992px) {
+  .sejarah,
+  .visi-misi,
+  .wilayah {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+}
